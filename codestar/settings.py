@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9gbb=o8=@r(&8mkkk=zgf66ewq55^d$r+1se(lr$0b0^e0s!b#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-beccallfor1-djangoblog-2wwxntjozak.ws.codeinstitute-ide.net',
 '.herokuapp.com']
@@ -89,10 +89,9 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.gitpodapp.com",
+    "https://*.8000-beccallfor1-djangoblog-2wwxntjozak.ws.codeinstitute-ide.net",
     "https://*.herokuapp.com"
 ]
-
 SECRET_KEY = os.environ.get("SECRET_KEY")
       
 # Password validation
