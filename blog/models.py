@@ -18,10 +18,10 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = model.ForeignKey(Post, on_delete=models.CASCADE,
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,
      related_name="comments" )
-    author = model.ForeignKey(
+    author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="commenter" )
     body = models.TextField()     
-    approved = madels.BooleanField(default=False) 
+    approved = models.BooleanField(default=False) 
     created_on = models.DateTimeField(auto_now_add=True)
